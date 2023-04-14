@@ -84,7 +84,7 @@ scp -r -i bio.pt.pem -P 37022  bio.pt@172.25.255.10:/home/bio.pt/data/Parcial1/p
 
 ### Árbol en phylo.io
 
-
+![Caos](https://github.com/Julift27/parcial_bioinformatica/blob/main/arbol_parcial.png)
 
 
 ## Punto 3
