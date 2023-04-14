@@ -86,6 +86,8 @@ scp -r -i bio.pt.pem -P 37022  bio.pt@172.25.255.10:/home/bio.pt/data/Parcial1/p
 
 ![Caos](https://github.com/Julift27/parcial_bioinformatica/blob/main/arbol_parcial.png)
 
+En el árbol se observa que la primera divergencia se dio en la especie _Spodoptera exigua_, la cual no ha presentadomuchas substituciones en comparación con el ancestro presumido. Seguida de está la siguiente especie en tener una divergencia es _Spodoptera cilium_ junto con nuestra query sequence (que con el blast ya habíamos asociado a esta especie) pero se puede observar que la query sequence tiene una mayor distancia en su rama (más substituciones). Sin embargo, este último clado formado presenta un bootstrap más bajo y no tiene un buen soporte. Los últimos clados en formarse corresponden a todas las secuencias de _Mythimna loreyi_ por un lado y a _Peridroma saucia_ por otro lado, teniendo esta última una rama más larga, es decir, más substituciones hasta el momento.
+
 
 ## Punto 3
 
