@@ -55,6 +55,66 @@ El gen corresponde al COI. Según los datos obtenidos del blast la secuencia eva
 
 ## Punto 2
 
+cat sequence.fasta query_parcial.fasta > concat_sequence.fasta
+
+### Muscle
+
+module load muscle/3.8.31
+muscle -in concat_sequence.fasta -out sequences_Noctuidae_muscle.fasta
+
+### Árbol de máxima verosimilitud
+
+mkdir FasConcat
+cp sequences_Noctuidae_muscle.fasta FasConcat/
+cp /home/bio.pt/data/FASconCAT-G_v1.05.1.pl FasConcat/
+
+./FASconCAT-G_v1.05.1.pl
+
+Establecer Nexus por bloques (escribir n una vez) y Phylip Relaxed (escribir p dos veces)
+Dar s y enter
+
+module load iqtree
+iqtree -s FcC_supermatrix.phy -m GTR+I+G -bb 1000 -pre Noctuidae_muscle
+
+exit (salir de salloc)
+exit (salir del cluster)
+
+### En la terminal 
+scp -r -i bio.pt.pem -P 37022  bio.pt@172.25.255.10:/home/bio.pt/data/Parcial1/parcial1_JulianaFonseca/FasConcat/Noctuidae_muscle.treefile /mnt/c/Users/julif/OneDrive/Escritorio/UROSARIO/"Semestre VII"/Bioinformática/parcial
+
+### Árbol en phylo.io
+
+
+
+
+## Punto 3
+
+ wget "https://raw.githubusercontent.com/paula-torres/bioinformatica_ur/main/files/archivo1.csv"
+ 
+less archivo1.csv
+wc archivo1.csv
+awk -F "\," '{print NF; exit}' archivo1.csv
+
+El archivo tiene 49 filas, 908 caracteres y 4 columnas
+
+sed 's/chr/Cromosoma/' archivo1.csv | sed 's/,/\t/g' > result_file.bed
+awk '$4=="coding"' result_file.bed > result_file_coding.bed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
