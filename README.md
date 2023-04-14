@@ -102,6 +102,25 @@ El archivo tiene 49 filas, 908 caracteres y 4 columnas
 sed 's/chr/Cromosoma/' archivo1.csv | sed 's/,/\t/g' > result_file.bed
 awk '$4=="coding"' result_file.bed > result_file_coding.bed
 
+## Punto 4
+
+cd /mnt/c/Users/julif/OneDrive/Escritorio/UROSARIO/Semestre VII/Bioinformática/llave/
+ssh -i bio.pt.pem -p 37022 bio.pt@172.25.255.10
+
+zip -r parcial1_JulianaFonseca.zip parcial1_JulianaFonseca/
+scp -r -i bio.pt.pem -P 37022  bio.pt@172.25.255.10://home/bio.pt/data/Parcial1/parcial1_JulianaFonseca.zip /mnt/c/Users/julif/OneDrive/Escritorio/UROSARIO/"Semestre VII"/Bioinformática/parcial
+
+unzip parcial1_JulianaFonseca.zip
+rm parcial1_JulianaFonseca.zip
+mkdir parcial1_terminal
+mv parcial1_JulianaFonseca parcial1_cluster
+
+cd /mnt/c/Users/julif/OneDrive/Escritorio/UROSARIO/Semestre VII/Bioinformática
+mv parcial/ parcial1_JulianaFonseca
+sudo apt install zip
+zip -r parcial1_JulianaFonseca.zip parcial1_JulianaFonseca/
+
+
 
 
 
