@@ -100,6 +100,7 @@ awk -F "\," '{print NF; exit}' archivo1.csv
 El archivo tiene 49 filas, 908 caracteres y 4 columnas
 
 sed 's/chr/Cromosoma/' archivo1.csv | sed 's/,/\t/g' > result_file.bed
+
 awk '$4=="coding"' result_file.bed > result_file_coding.bed
 
 ## Punto 4
